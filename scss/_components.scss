@@ -18,7 +18,6 @@
   top: 0;
   z-index: 4;
   background-color: $primary-color;
-  border-bottom: 2px solid $secondary-color;
   margin-bottom: 12rem;
 
   .navBar__inner {
@@ -35,6 +34,7 @@
     .navBar__text {
       background: linear-gradient(to right, $secondary-color, #590059);
       background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -73,6 +73,7 @@
       .hero__title {
         background: linear-gradient(to right, $secondary-color, #590059);
         background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
@@ -123,9 +124,9 @@
 
 #about {
   background: linear-gradient(to right, $secondary-color, #590059);
-  padding-top: 12rem;
+  padding: 12rem 0rem;
   clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
-  padding-bottom: 12rem;
+  margin-bottom: 5rem;
 
   .about__img__container {
     display: grid;
@@ -183,5 +184,17 @@
         grid-area: 7;
       }
     }
+  }
+}
+
+// Testimonials Section
+
+#testimonials {
+  .testimonials__title {
+    background: linear-gradient(to right, $secondary-color, #590059);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0.5rem;
   }
 }

@@ -49,6 +49,10 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .p-1 {
   padding: 1rem;
 }
@@ -389,7 +393,6 @@ a {
   top: 0;
   z-index: 4;
   background-color: #fff;
-  border-bottom: 2px solid #800080;
   margin-bottom: 12rem;
 }
 #navBar .navBar__inner {
@@ -405,6 +408,7 @@ a {
 #navBar .navBar__inner .navBar__text {
   background: linear-gradient(to right, #800080, #590059);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 #navBar .navBar__inner .navBar__btn {
@@ -436,6 +440,7 @@ a {
 #hero .hero__content .hero__info .hero__title {
   background: linear-gradient(to right, #800080, #590059);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 #hero .hero__content .hero__info .hero__links {
@@ -475,9 +480,9 @@ a {
 
 #about {
   background: linear-gradient(to right, #800080, #590059);
-  padding-top: 12rem;
+  padding: 12rem 0rem;
   clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
-  padding-bottom: 12rem;
+  margin-bottom: 5rem;
 }
 #about .about__img__container {
   display: grid;
@@ -517,4 +522,12 @@ a {
 }
 #about .about__img__container .about__img--7 {
   grid-area: 7;
+}
+
+#testimonials .testimonials__title {
+  background: linear-gradient(to right, #800080, #590059);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.5rem;
 }
