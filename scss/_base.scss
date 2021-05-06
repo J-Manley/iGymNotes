@@ -32,15 +32,12 @@ body {
   overflow: hidden;
 }
 
-img {
+img,
+video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-
-svg {
-  width: auto;
-  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 ul {

@@ -24,15 +24,12 @@ body {
   overflow: hidden;
 }
 
-img {
+img,
+video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-
-svg {
-  width: auto;
-  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 ul {
@@ -377,7 +374,7 @@ a {
   line-height: 1;
 }
 
-#hero #navBar .navBar__btn {
+#navBar .navBar__inner .navBar__btn {
   display: inline-block;
   padding: 0.7rem 2rem;
   border: 2px solid transparent;
@@ -387,61 +384,127 @@ a {
   z-index: 1;
 }
 
-#hero {
-  position: absolute;
-  right: 0;
-  width: 100%;
-  min-height: 100vh;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 3;
-}
-#hero .hero__video {
-  position: absolute;
+#navBar {
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-}
-#hero .hero__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #333;
-  mix-blend-mode: overlay;
-}
-#hero .hero__links {
-  display: flex;
-  padding: 1rem;
-}
-#hero .hero__link {
-  max-width: 150px;
-}
-#hero #navBar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem 2rem;
   z-index: 4;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #fff;
+  border-bottom: 2px solid #800080;
+  margin-bottom: 12rem;
 }
-#hero #navBar .navBar__logo {
+#navBar .navBar__inner {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+#navBar .navBar__inner .navBar__logo {
   width: 75px;
   height: 75px;
   margin-right: 0.5rem;
 }
-#hero #navBar .navBar__btn {
-  background-color: #800080;
+#navBar .navBar__inner .navBar__text {
+  background: linear-gradient(to right, #800080, #590059);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#navBar .navBar__inner .navBar__btn {
+  background: linear-gradient(to right, #800080, #590059);
   color: #fff;
   margin-left: auto;
   text-transform: uppercase;
+  transition: opacity 250ms ease;
+}
+#navBar .navBar__inner .navBar__btn:hover {
+  opacity: 0.9;
+}
+
+#hero {
+  height: 100vh;
+}
+#hero .hero__content {
+  display: flex;
+  align-items: center;
+}
+#hero .hero__content .hero__info {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+#hero .hero__content .hero__info .hero__title {
+  background: linear-gradient(to right, #800080, #590059);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#hero .hero__content .hero__info .hero__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+}
+#hero .hero__content .hero__info .hero__link {
+  max-width: 200px;
+  transition: opacity, transform, 250ms ease;
+  flex-shrink: 0;
+}
+#hero .hero__content .hero__info .hero__link:hover {
+  opacity: 0.75;
+  transform: scale(1.05);
+}
+#hero .hero__content .hero__video {
+  width: 720px;
+  flex: 1 0 auto;
+  align-self: flex-start;
+  position: relative;
+}
+#hero .hero__content .hero__video:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+#hero .hero__content .hero__video video {
+  width: 100%;
+}
+
+#about {
+  background: linear-gradient(to right, #800080, #590059);
+  padding-top: 2rem;
+}
+#about .about__img__container {
+  display: grid;
+  grid-template-areas: "1 ." ". 2" "3 ." ". 4" "5 ." ". 6" "7 .";
+  row-gap: 2rem;
+}
+#about .about__img__container .about__img {
+  max-width: 640px;
+}
+#about .about__img__container .about__img__right {
+  justify-self: end;
+}
+#about .about__img__container .about__img--1 {
+  grid-area: 1;
+}
+#about .about__img__container .about__img--2 {
+  grid-area: 2;
+}
+#about .about__img__container .about__img--3 {
+  grid-area: 3;
+}
+#about .about__img__container .about__img--4 {
+  grid-area: 4;
+}
+#about .about__img__container .about__img--5 {
+  grid-area: 5;
+}
+#about .about__img__container .about__img--6 {
+  grid-area: 6;
+}
+#about .about__img__container .about__img--7 {
+  grid-area: 7;
 }
