@@ -604,4 +604,66 @@ a {
 }
 #footer .footer__links > a {
   margin: 0rem 0.5rem;
+  transition: opacity 250ms ease;
+}
+#footer .footer__links > a:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 500px) {
+  #navBar {
+    margin-bottom: 4rem;
+  }
+  #navBar .navBar__inner .navBar__btn {
+    display: none;
+  }
+
+  #hero {
+    margin-bottom: -10rem;
+  }
+  #hero .hero__content .hero__info {
+    padding: 0rem 0.5rem 0rem 1rem;
+  }
+  #hero .hero__content .hero__info .hero__links {
+    display: block;
+    margin-right: 2rem;
+  }
+  #hero .hero__content .hero__info .hero__links div:nth-of-type(1) {
+    margin-bottom: 1rem;
+  }
+  #hero .hero__content .hero__video {
+    display: none;
+  }
+
+  #about {
+    padding: 7rem 0rem;
+    margin-bottom: 2rem;
+  }
+  #about .about__img__container .about__img__left {
+    margin-left: unset;
+  }
+
+  #testimonials {
+    margin-bottom: 5rem;
+  }
+  #testimonials .testimonials__title {
+    text-align: left;
+    padding: 0 1rem 0.5rem 1.5rem;
+  }
+  #testimonials .testimonials__cards {
+    grid-template-areas: "card-1" "card-2" "card-3" "card-4" "card-5" "card-6";
+  }
+  #testimonials .testimonials__cards .testimonials__card {
+    max-width: 275px;
+  }
+
+  #footer {
+    padding: 2rem 0rem;
+  }
+  #footer .footer__content {
+    display: none;
+  }
+  #footer .footer__links > a {
+    margin: 0rem 1rem;
+  }
 }

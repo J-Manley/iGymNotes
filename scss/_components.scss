@@ -289,6 +289,11 @@
   .footer__links {
     > a {
       margin: 0rem 0.5rem;
+      transition: opacity 250ms ease;
+
+      &:hover {
+        opacity: 0.75;
+      }
     }
   }
 }
