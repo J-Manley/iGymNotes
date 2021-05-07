@@ -135,8 +135,7 @@
       "3"
       "4"
       "5"
-      "6"
-      "7";
+      "6";
     row-gap: 2rem;
     max-width: 1100px;
 
@@ -178,10 +177,6 @@
       &--6 {
         grid-area: 6;
       }
-
-      &--7 {
-        grid-area: 7;
-      }
     }
   }
 }
@@ -189,6 +184,8 @@
 // Testimonials Section
 
 #testimonials {
+  margin-bottom: 12rem;
+
   .testimonials__title {
     background: linear-gradient(to right, $secondary-color, #590059);
     background-clip: text;
@@ -204,29 +201,43 @@
       "card-4 card-5 card-6";
     row-gap: 2rem;
     justify-items: center;
-    max-width: 750px;
-    margin: 0 auto 2rem auto;
+    max-width: 900px;
+    margin: 0 auto;
 
     .testimonials__card {
-      max-width: 200px;
+      max-width: 250px;
+      height: 330px;
       border-radius: 5px;
       background: linear-gradient(to right, $secondary-color, #590059);
       color: $primary-color;
 
       &__img {
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-        & > img {
+        > img {
           border-radius: 5px 5px 0 0;
         }
       }
 
       &__info {
+        padding-top: 0.5rem;
+      }
+
+      &__title {
+        color: $accent-color;
+        padding: 0rem 1rem;
+        margin-bottom: 0.25rem;
       }
 
       &__text {
         text-align: left;
-        padding: 0.5rem 0.5rem 0.75rem 1.5rem;
+        padding: 0.5rem 1.25rem 0.75rem 1.25rem;
+        position: relative;
+
+        > span {
+          font-size: 1.2rem;
+          line-height: 0;
+        }
       }
 
       &--1 {
@@ -252,6 +263,32 @@
       &--6 {
         grid-area: card-6;
       }
+    }
+  }
+}
+
+// Footer section
+
+#footer {
+  background-color: $primary-color;
+  border-top: 2px solid $secondary-color;
+  padding: 3rem 0rem;
+
+  .footer__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer__logo {
+      width: 75px;
+      height: 75px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .footer__links {
+    > a {
+      margin: 0rem 0.5rem;
     }
   }
 }
