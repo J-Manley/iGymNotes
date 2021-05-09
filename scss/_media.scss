@@ -85,5 +85,17 @@
         margin: 0rem 1rem;
       }
     }
+
+    .footer__text {
+      max-width: 225px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Phones
+@media (max-width: 500px) and (max-height: 800px) {
+  #hero {
+    margin-bottom: 0rem;
   }
 }
