@@ -611,6 +611,15 @@ a {
   opacity: 0.75;
 }
 
+@media (max-width: 768px) and (min-width: 500px) {
+  #hero .hero__video {
+    display: none;
+  }
+
+  #about .about__img__container .about__img__left {
+    margin-left: unset;
+  }
+}
 @media (max-width: 500px) {
   #navBar {
     margin-bottom: 4rem;
