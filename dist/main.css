@@ -388,12 +388,37 @@ a {
   z-index: 1;
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.fade-in.f-appear {
+  opacity: 1;
+}
+
+.stagger-in {
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: opacity, transform, 250ms ease-in;
+}
+.stagger-in.s-appear {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
 #navBar {
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 4;
   background-color: #fff;
   margin-bottom: 8rem;
+  transition: opacity, box-shadow, 250ms ease;
+}
+#navBar.navBar--scrolled {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
 }
 #navBar .navBar__inner {
   display: flex;
