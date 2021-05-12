@@ -2,7 +2,7 @@ const navBar = document.querySelector("#navBar");
 const hero = document.querySelector(".hero__content");
 
 const navOptions = {
-  rootMargin: "-650px 0px 0px 0px",
+  rootMargin: "-651px 0px 0px 0px",
 };
 
 const navObserver = new IntersectionObserver((entries, navObserver) => {
