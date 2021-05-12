@@ -740,6 +740,12 @@ a {
   #testimonials .testimonials__cards .testimonials__card {
     max-width: 275px;
   }
+  #testimonials .testimonials__cards .testimonials__card--3 {
+    transition-delay: unset;
+  }
+  #testimonials .testimonials__cards .testimonials__card--4 {
+    transition-delay: 250ms;
+  }
 
   #footer {
     padding: 2rem 0rem;

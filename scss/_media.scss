@@ -124,6 +124,14 @@
 
       .testimonials__card {
         max-width: 275px;
+
+        &--3 {
+          transition-delay: unset;
+        }
+
+        &--4 {
+          transition-delay: 250ms;
+        }
       }
     }
   }

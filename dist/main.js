@@ -22,7 +22,7 @@ navObserver.observe(hero);
 const slideInLeft = document.querySelectorAll(".slide__in--left");
 
 const slideInLeftOptions = {
-  rootMargin: "0px 0px -200px 0px",
+  rootMargin: "0px 0px -300px 0px",
 };
 
 const slideInLeftScroll = new IntersectionObserver((entries, slideInLeftScroll) => {
@@ -43,7 +43,7 @@ slideInLeft.forEach((slide) => {
 const slideInRight = document.querySelectorAll(".slide__in--right");
 
 const slideInRightOptions = {
-  rootMargin: "0px 0px -200px 0px",
+  rootMargin: "0px 0px -300px 0px",
 };
 
 const slideInRightScroll = new IntersectionObserver((entries, slideInRightScroll) => {
@@ -66,7 +66,7 @@ slideInRight.forEach((slide) => {
 const dropIn = document.querySelectorAll(".drop__in");
 
 const dropInOptions = {
-  rootMargin: "0px 0px -200px 0px",
+  rootMargin: "0px 0px -300px 0px",
 };
 
 const dropInScroll = new IntersectionObserver((entries, dropInScroll) => {
