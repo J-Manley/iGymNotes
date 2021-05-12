@@ -11,21 +11,44 @@
   z-index: 1;
 }
 
-.fade-in {
-  opacity: 0;
-  transition: opacity 250ms ease-in;
+.slide__in {
+  &--left {
+    opacity: 0;
+    transition: opacity, transform, 250ms ease-in;
+    transform: translateX(-10%);
 
-  &.f-appear {
-    opacity: 1;
+    &.left-appear {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  &--right {
+    opacity: 0;
+    transition: opacity, transform, 250ms ease-in;
+    transform: translateX(10%);
+
+    &.right-appear {
+      opacity: 1;
+      transform: translateX(0%);
+    }
   }
 }
 
-.stagger-in {
+.drop__in {
   opacity: 0;
   transform: translateY(-10%);
   transition: opacity, transform, 250ms ease-in;
 
-  &.s-appear {
+  &.delay-1 {
+    transition-delay: 250ms;
+  }
+
+  &.delay-2 {
+    transition-delay: 500ms;
+  }
+
+  &.drop-appear {
     opacity: 1;
     transform: translateY(0%);
   }
