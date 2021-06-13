@@ -146,6 +146,19 @@
           transform: scale(1.05);
         }
       }
+
+      #app__store {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $primary-color;
+          inset: 1rem;
+          z-index: -1;
+          border-radius: 5px;
+        }
+      }
     }
 
     .hero__video {
